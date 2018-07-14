@@ -1,7 +1,7 @@
 import React from "react";
-import "./ImageCard.css";
+import "./ImageCards.css";
 
-const ImageCard = props => (
+const ImageCards = props => (
   <div className="card">
     <div className="img-container">
       <img alt={props.name} src={props.image} />
@@ -10,4 +10,4 @@ const ImageCard = props => (
   </div>
 );
 
-export default ImageCard;
+export default ImageCards;
