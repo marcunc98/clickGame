@@ -76,7 +76,7 @@ class App extends Component {
         <Message />
         {this.state.images.map(image => (
           <ImageCards
-            clickCount={this.handleClick}
+            clickCount={this.shuffleImages}
             id={image.id}
             key={image.id}
             name={image.name}
