@@ -15,7 +15,6 @@ class App extends Component {
     topScore: 0
   };
 
-
   shuffleTest() {
     console.log("CLICKED HAPPENED");
     console.log("IMAGES:", this.state.images);
@@ -53,17 +52,17 @@ class App extends Component {
   handleClick = id => {
     let guessedCorrect = false;
     console.log("handle click");
-    let newData = this.state.images.map(item => {
+    const newData = this.state.images.map(item => {
       const newImage = { ...item };
       if (newImage.id === id) {
         console.log("GUESSED CORRECT!");
         guessedCorrect = true;
       }
+
       return newImage;
       if (guessedCorrect) {
         // function for guess correct
-      
-
+        newData;
       } else {
         // function incorrect guesses
       }
@@ -91,4 +90,3 @@ class App extends Component {
 }
 
 export default App;
-
