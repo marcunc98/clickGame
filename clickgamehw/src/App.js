@@ -64,7 +64,7 @@ class App extends Component {
     });
     if (guessedCorrect) {
       // function for guess correct
-      newData;
+     
     } else {
       // function incorrect guesses
     }
