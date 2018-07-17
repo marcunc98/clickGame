@@ -57,16 +57,18 @@ class App extends Component {
       if (newImage.id === id) {
         console.log("GUESSED CORRECT!");
         guessedCorrect = true;
-      }
-
-      return newImage;
-      if (guessedCorrect) {
-        // function for guess correct
-        newData;
       } else {
-        // function incorrect guesses
+        console.log("INCORRECT GUESS");
       }
+      return newImage;
     });
+    if (guessedCorrect) {
+      // function for guess correct
+      newData;
+    } else {
+      // function incorrect guesses
+    }
+    this.setState({ images: this.shuffleImages(newData) });
   };
 
   render() {
@@ -76,7 +78,7 @@ class App extends Component {
         <Message />
         {this.state.images.map(image => (
           <ImageCards
-            clickCount={this.shuffleImages}
+            handleClick={this.handleClick}
             id={image.id}
             key={image.id}
             name={image.name}
